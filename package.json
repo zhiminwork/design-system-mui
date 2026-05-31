@@ -16,7 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build:tokens": "tsx style-dictionary.config.ts",
+    "build": "npm run build:tokens && tsup",
     "dev": "tsup --watch"
   },
   "peerDependencies": {
@@ -29,7 +30,9 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@types/react": "^19.0.0",
+    "style-dictionary": "^4.0.0",
     "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },
   "publishConfig": {
