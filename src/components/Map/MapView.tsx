@@ -11,13 +11,19 @@ import {
   type FloatingPanelState,
 } from '../../types/map'
 
-// Leaflet's default marker icons break with bundlers — fix by pointing at the CDN
-delete (L.Icon.Default.prototype as any)._getIconUrl
-L.Icon.Default.mergeOptions({
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+// Leaflet's default marker icons break with bundlers — replace with an inline SVG icon
+const defaultIcon = L.divIcon({
+  className: '',
+  html: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 36">
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"
+      fill="#1976d2" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="5" fill="#fff"/>
+  </svg>`,
+  iconSize: [24, 36],
+  iconAnchor: [12, 36],
+  popupAnchor: [0, -36],
 })
+L.Marker.prototype.options.icon = defaultIcon
 
 interface MapViewProps {
   markers?: MapMarker[]
