@@ -9,9 +9,6 @@ import { PanelContent } from './PanelContent'
 import type { Notification } from '@design-system/types/notification'
 import type { MapMarker } from '@design-system/types/map'
 
-// Paste your Mapbox token here, or set VITE_MAPBOX_TOKEN in demo/.env
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN ?? ''
-
 const demoMarkers: MapMarker[] = [
   {
     id: 'm1',
@@ -54,26 +51,9 @@ export default function App() {
         modules={modules}
         notifications={notifications}
         onNotificationRead={handleNotificationRead}
-        mapSlot={
-          MAPBOX_TOKEN
-            ? <MapView accessToken={MAPBOX_TOKEN} markers={demoMarkers} />
-            : <MapPlaceholder />
-        }
+        mapSlot={<MapView markers={demoMarkers} />}
         renderPanelContent={(moduleId) => <PanelContent moduleId={moduleId} />}
       />
     </ThemeProvider>
-  )
-}
-
-function MapPlaceholder() {
-  return (
-    <div style={{
-      width: '100%', height: '100%',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      background: '#e8eaf0', flexDirection: 'column', gap: 8,
-    }}>
-      <span style={{ fontSize: 14, color: '#555' }}>Map requires a Mapbox token</span>
-      <span style={{ fontSize: 12, color: '#888' }}>Add VITE_MAPBOX_TOKEN to demo/.env</span>
-    </div>
   )
 }

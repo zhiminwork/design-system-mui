@@ -13,7 +13,8 @@ export default defineConfig({
       '@mui/icons-material': path.resolve(__dirname, 'node_modules/@mui/icons-material'),
       '@emotion/react': path.resolve(__dirname, 'node_modules/@emotion/react'),
       '@emotion/styled': path.resolve(__dirname, 'node_modules/@emotion/styled'),
-      'mapbox-gl': path.resolve(__dirname, 'node_modules/mapbox-gl'),
+      'leaflet': path.resolve(__dirname, 'node_modules/leaflet'),
+      'react-leaflet': path.resolve(__dirname, 'node_modules/react-leaflet'),
     },
   },
 })
