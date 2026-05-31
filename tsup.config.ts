@@ -7,5 +7,13 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  external: ['react', 'react-dom', '@mui/material', '@mui/system', '@emotion/react', '@emotion/styled'],
+  external: [
+    'react',
+    'react-dom',
+    '@mui/material',
+    '@mui/system',
+    '@emotion/react',
+    '@emotion/styled',
+    'mapbox-gl',
+  ],
 })

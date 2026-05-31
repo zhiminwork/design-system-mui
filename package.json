@@ -1,6 +1,6 @@
 {
   "name": "@zhiminwork/design-system-mui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared design system built on MUI",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -21,14 +21,17 @@
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "mapbox-gl": ">=3"
   },
   "devDependencies": {
     "@mui/material": "^9.0.1",
+    "@mui/icons-material": "^9.0.1",
     "@mui/system": "^9.0.1",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@types/react": "^19.0.0",
+    "mapbox-gl": "^3.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
