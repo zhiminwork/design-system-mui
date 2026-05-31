@@ -1,0 +1,17 @@
+{
+  "name": "@design-system/track-a",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Track A — references shared MUI upstream source",
+  "scripts": {
+    "dev": "echo 'Add your dev command here'",
+    "build": "echo 'Add your build command here'"
+  },
+  "dependencies": {
+    "@mui/material": "^9.0.1",
+    "@mui/system": "^9.0.1",
+    "@mui/lab": "^9.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "design-system-mui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo: shared MUI upstream vendor + Track A + Track B",
+  "workspaces": [
+    "track-a",
+    "track-b"
+  ],
+  "scripts": {
+    "track-a": "npm --workspace=track-a run dev",
+    "track-b": "npm --workspace=track-b run dev"
+  }
+}
